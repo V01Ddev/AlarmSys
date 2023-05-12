@@ -31,7 +31,7 @@ void setup(){
     Serial.begin(115200);
 
     // Setting up PIR sensor 
-    pinMode(PIr, INPUT);
+    pinMode(PIr, INPUT_PULLDOWN);
 
     // More timer things
     timer.every(10000, SendStatus);
