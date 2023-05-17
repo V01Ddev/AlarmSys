@@ -7,9 +7,9 @@ Sheet 1 1
 Title "ESP32 AlarmSys"
 Date "2023-05-03"
 Rev "1"
-Comp "awef"
+Comp ""
 Comment1 ""
-Comment2 ""
+Comment2 "www.v01d.dev"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -43,29 +43,6 @@ F 7 "DOIT" H 4500 4100 50  0001 L BNN "MANUFACTURER"
 	1    4500 4100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2400 5400 5100 5400
-Wire Wire Line
-	5100 5400 5100 5100
-Wire Wire Line
-	3700 3100 3900 3100
-Wire Wire Line
-	3700 3100 3700 4400
-$Comp
-L LED:WS2812B LED_STRIP
-U 1 1 6452FC60
-P 2950 4050
-F 0 "LED_STRIP" H 3294 4096 50  0000 L CNN
-F 1 "WS2812B" H 3294 4005 50  0000 L CNN
-F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 3000 3750 50  0001 L TNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3050 3675 50  0001 L TNN
-	1    2950 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 4100 3800 4100
-Wire Wire Line
-	3800 4100 3800 4500
 $Comp
 L LED:SFH460 D?
 U 1 1 6454695C
@@ -109,23 +86,32 @@ GND
 Text GLabel 7150 4000 0    50   Input ~ 0
 DATA
 Wire Wire Line
-	2950 4400 2950 4350
-Wire Wire Line
-	2950 4400 3700 4400
-Wire Wire Line
-	2600 4500 2600 4050
-Wire Wire Line
-	2600 4050 2650 4050
-Wire Wire Line
-	2600 4500 3800 4500
-Wire Wire Line
-	2400 3700 2950 3700
-Wire Wire Line
-	2950 3700 2950 3750
-Wire Wire Line
-	2400 3700 2400 5400
-Wire Wire Line
 	9200 5400 7250 5400
 Wire Wire Line
 	7250 5400 7250 4400
+Wire Wire Line
+	5100 5400 5100 5100
+Wire Wire Line
+	3250 4100 3900 4100
+Wire Wire Line
+	2600 4050 2650 4050
+Wire Wire Line
+	2950 3100 3900 3100
+Wire Wire Line
+	5100 5400 2950 5400
+$Comp
+L LED:WS2812B LED_STRIP
+U 1 1 6452FC60
+P 2950 4100
+F 0 "LED_STRIP" H 3294 4146 50  0000 L CNN
+F 1 "WS2812B" H 3294 4055 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 3000 3800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3050 3725 50  0001 L TNN
+	1    2950 4100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 5400 2950 4400
+Wire Wire Line
+	2950 3100 2950 3800
 $EndSCHEMATC

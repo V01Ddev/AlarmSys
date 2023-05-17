@@ -7,9 +7,9 @@ Sheet 1 1
 Title "ESP32 AlarmSys"
 Date "2023-05-03"
 Rev "1"
-Comp "awef"
+Comp "www.v01d.dev"
 Comment1 ""
-Comment2 ""
+Comment2 "www.v01d.dev"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -92,11 +92,13 @@ Wire Wire Line
 Wire Wire Line
 	5100 5400 5100 5100
 Wire Wire Line
-	2400 5400 5100 5400
-Wire Wire Line
 	3250 4100 3900 4100
 Wire Wire Line
 	2600 4050 2650 4050
+Wire Wire Line
+	2950 3100 3900 3100
+Wire Wire Line
+	5100 5400 2950 5400
 $Comp
 L LED:WS2812B LED_STRIP
 U 1 1 6452FC60
@@ -106,8 +108,10 @@ F 1 "WS2812B" H 3294 4055 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 3000 3800 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3050 3725 50  0001 L TNN
 	1    2950 4100
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	2950 3100 3900 3100
+	2950 5400 2950 4400
+Wire Wire Line
+	2950 3100 2950 3800
 $EndSCHEMATC
