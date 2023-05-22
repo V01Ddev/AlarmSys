@@ -34,7 +34,7 @@ void setup(){
     pinMode(PIr, INPUT_PULLDOWN);
 
     // More timer things
-    timer.every(10000, SendStatus);
+    timer.every(60000, SendStatus);
 
     // Setting up esp_now
     WiFi.mode(WIFI_STA);
@@ -57,6 +57,11 @@ void setup(){
         Serial.println("Failed to add peer");
         return;
     }
+
+    // Sending initial status
+
+    esp_now_send(broadcastAddress, (uint8_t *) &PIRState, sizeof(PIRState));
+
 }
 
 
