@@ -5,7 +5,7 @@
 
 
 // Leds...
-const int RGBDataPin = 5;
+const int RGBDataPin = 25;
 const int RGBClock = 13;
 const int NumLed = 8;
 
@@ -20,7 +20,7 @@ CRGB leds[NumLed];
 bool Status = false; 
 int DataRcv;
 
-int NextRcv = (millis() / 1000) + 15;
+int NextRcv = (millis() / 1000) + 65;
 
 
 
@@ -70,7 +70,7 @@ void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
     } else if (DataRcv == 9){
         Status = true;
         Serial.println("status is now true");
-        NextRcv =  (millis() / 1000) + 15;
+        NextRcv =  (millis() / 1000) + 65;
     }
 
     else {
